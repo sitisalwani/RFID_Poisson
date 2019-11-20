@@ -208,8 +208,8 @@ summary {
 </div>
 <div id="why-poisson-distribution" class="section level3">
 <h3>Why Poisson distribution?</h3>
-<p>Rationally, Poisson distribution is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 10 RFID tags with ocurrence of 7 readings for every RFID tag have been captured per minute using one RFID reader. Can we generate a simulation of number of RFID readings for the next 2 minutes?</p>
-<p>For example, the Poisson distribution is appropriate for modeling the number of RFID data, if they know the average of readings ocurrence during that time period.</p>
+<p>Rationally, Poisson distribution is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 10 RFID tags with ocurrence of 7 readings for every RFID tag have been captured per second using one RFID reader. Can we generate a simulation of number of RFID readings for the next 10 seconds?</p>
+<p>The Poisson distribution is appropriate for modeling the number of RFID data, if they know the average of readings ocurrence during that time period.</p>
 <ul>
 <li>Although the average reading ocurrence is 7, they could theoretically get any number of readings during that time period.</li>
 <li>The events are effectively independently since they is no reason to expect an RFID tag to affect the chances of another ocurrence readings captured.</li>
@@ -248,7 +248,7 @@ summary {
 </blockquote>
 <p>For example;</p>
 <pre class="r"><code>rpois(10,7)</code></pre>
-<pre><code>##  [1]  7  4  8  7  6  5  5  8 11  7</code></pre>
+<pre><code>##  [1]  7  7  6  7  8  6 11  9  5  6</code></pre>
 <p>As you can see, assume that there are 10 RFID tags. The successful rate of RFID reading frequency is 7. Apparently there was a mad dash of &gt;7 frequency readings of a tag at some point. The Poisson distribution models this type of variation in the expected throughput of a process.</p>
 <div id="practical-uses-of-poisson-distribution." class="section level4">
 <h4>Practical uses of Poisson distribution.</h4>

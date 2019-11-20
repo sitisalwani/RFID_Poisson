@@ -29,9 +29,9 @@ A manufacturer would never try to read every bar code on pallet going through lo
 2. **Data Quality**. The data can be very noisy and redundant. As already mentioned, wireless communication may not always be realiable due to radio-frequenct collicions and signal interference, metal shielding, or other physical obstructions. According to [ref], most retailers will admit to having an inventory accuracy of around 60-70%. These technial issues lead to tags being missed (false-negative readings) or unexpected extra readings (false-positive readings). To eliminate these false readings, semantic post-processing, cleaning and filtering must be performed at the middleware layer.
 
 ### Why Poisson distribution?
-Rationally, Poisson distribution is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 10 RFID tags with ocurrence of 7 readings for every RFID tag have been captured per minute using one RFID reader. Can we generate a simulation of number of RFID readings for the next 2 minutes?
+Rationally, Poisson distribution is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 10 RFID tags with ocurrence of 7 readings for every RFID tag have been captured per second using one RFID reader. Can we generate a simulation of number of RFID readings for the next 10 seconds?
 
-For example, the Poisson distribution is appropriate for modeling the number of RFID data, if they know the average of readings ocurrence during that time period.  
+The Poisson distribution is appropriate for modeling the number of RFID data, if they know the average of readings ocurrence during that time period.  
 
 - Although the average reading ocurrence is 7, they could theoretically get any number of readings during that time period.
 - The events are effectively independently since they is no reason to expect an RFID tag to affect the chances of another ocurrence readings captured.
