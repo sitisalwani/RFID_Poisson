@@ -1,3 +1,44 @@
 [Kssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ git init
 Initialized empty Git repository in /Users/sitisalwaniyaacob/Dropbox/GitHub/Poisson_Distribution/.git/
 ]0;~/Dropbox/GitHub/Poisson_Distributionssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ git add .
+]0;~/Dropbox/GitHub/Poisson_Distributionssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ git commit - m ""i"[1P"I"n"i"t"i"a"l" "C"o"m"m"i"t"[C[1P[C[C[C[C[C[C[C[C[C[C[C[C\ommit"[1Pommit"[1Pommit"commit"
+[master (root-commit) 02bc372] Initial commit
+ 25 files changed, 621 insertions(+)
+ create mode 100644 .DS_Store
+ create mode 100644 .RData
+ create mode 100644 .Rhistory
+ create mode 100644 .Rproj.user/2FB61ED1/console06/F876BDB1
+ create mode 100644 .Rproj.user/2FB61ED1/console06/INDEX001
+ create mode 100644 .Rproj.user/2FB61ED1/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/2FB61ED1/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/2FB61ED1/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/2FB61ED1/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/2FB61ED1/rmd-outputs
+ create mode 100644 .Rproj.user/2FB61ED1/saved_source_markers
+ create mode 100644 .Rproj.user/2FB61ED1/sources/prop/17A99273
+ create mode 100644 .Rproj.user/2FB61ED1/sources/prop/6FB419A0
+ create mode 100644 .Rproj.user/2FB61ED1/sources/prop/93DF908B
+ create mode 100644 .Rproj.user/2FB61ED1/sources/prop/INDEX
+ create mode 100644 .Rproj.user/2FB61ED1/sources/s-9E1931AC/30F4419B
+ create mode 100644 .Rproj.user/2FB61ED1/sources/s-9E1931AC/30F4419B-contents
+ create mode 100644 .Rproj.user/2FB61ED1/sources/s-9E1931AC/D486BD03-contents
+ create mode 100644 .Rproj.user/2FB61ED1/sources/s-9E1931AC/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 Poisson_Distribution.Rproj
+ create mode 100644 Poisson_Doc.docx
+ create mode 100644 RPois.Rmd
+ create mode 100644 RPois.html
+]0;~/Dropbox/GitHub/Poisson_Distributionssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ git remote add origin https://github.com/sitisalwani/RFID_Pois son.git
+]0;~/Dropbox/GitHub/Poisson_Distributionssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ git push -u origin master
+[KEnumerating objects: 33, done.
+[KCounting objects:   3% (1/33)[KCounting objects:   6% (2/33)[KCounting objects:   9% (3/33)[KCounting objects:  12% (4/33)[KCounting objects:  15% (5/33)[KCounting objects:  18% (6/33)[KCounting objects:  21% (7/33)[KCounting objects:  24% (8/33)[KCounting objects:  27% (9/33)[KCounting objects:  30% (10/33)[KCounting objects:  33% (11/33)[KCounting objects:  36% (12/33)[KCounting objects:  39% (13/33)[KCounting objects:  42% (14/33)[KCounting objects:  45% (15/33)[KCounting objects:  48% (16/33)[KCounting objects:  51% (17/33)[KCounting objects:  54% (18/33)[KCounting objects:  57% (19/33)[KCounting objects:  60% (20/33)[KCounting objects:  63% (21/33)[KCounting objects:  66% (22/33)[KCounting objects:  69% (23/33)[KCounting objects:  72% (24/33)[KCounting objects:  75% (25/33)[KCounting objects:  78% (26/33)[KCounting objects:  81% (27/33)[KCounting objects:  84% (28/33)[KCounting objects:  87% (29/33)[KCounting objects:  90% (30/33)[KCounting objects:  93% (31/33)[KCounting objects:  96% (32/33)[KCounting objects: 100% (33/33)[KCounting objects: 100% (33/33), done.
+Delta compression using up to 4 threads
+[KCompressing objects:   3% (1/28)[KCompressing objects:   7% (2/28)[KCompressing objects:  10% (3/28)[KCompressing objects:  14% (4/28)[KCompressing objects:  17% (5/28)[KCompressing objects:  21% (6/28)[KCompressing objects:  25% (7/28)[KCompressing objects:  28% (8/28)[KCompressing objects:  32% (9/28)[KCompressing objects:  35% (10/28)[KCompressing objects:  39% (11/28)[KCompressing objects:  42% (12/28)[KCompressing objects:  46% (13/28)[KCompressing objects:  50% (14/28)[KCompressing objects:  53% (15/28)[KCompressing objects:  57% (16/28)[KCompressing objects:  60% (17/28)[KCompressing objects:  64% (18/28)[KCompressing objects:  67% (19/28)[KCompressing objects:  71% (20/28)[KCompressing objects:  75% (21/28)[KCompressing objects:  78% (22/28)[KCompressing objects:  82% (23/28)[KCompressing objects:  85% (24/28)[KCompressing objects:  89% (25/28)[KCompressing objects:  92% (26/28)[KCompressing objects:  96% (27/28)[KCompressing objects: 100% (28/28)[KCompressing objects: 100% (28/28), done.
+[KWriting objects:   3% (1/33)[KWriting objects:   6% (2/33)[KWriting objects:  12% (4/33)[KWriting objects:  15% (5/33)[KWriting objects:  18% (6/33)[KWriting objects:  21% (7/33)[KWriting objects:  24% (8/33)[KWriting objects:  27% (9/33)[KWriting objects:  30% (10/33)[KWriting objects:  33% (11/33)[KWriting objects:  36% (12/33)[KWriting objects:  39% (13/33)[KWriting objects:  42% (14/33)[KWriting objects:  45% (15/33)[KWriting objects:  48% (16/33)[KWriting objects:  51% (17/33)[KWriting objects:  54% (18/33)[KWriting objects:  57% (19/33)[KWriting objects:  60% (20/33)[KWriting objects:  63% (21/33)[KWriting objects:  66% (22/33)[KWriting objects:  69% (23/33)[KWriting objects:  72% (24/33)[KWriting objects:  75% (25/33)[KWriting objects:  78% (26/33)[KWriting objects:  81% (27/33)[KWriting objects:  84% (28/33)[KWriting objects:  87% (29/33)[KWriting objects:  90% (30/33)[KWriting objects:  93% (31/33)[KWriting objects:  96% (32/33)[KWriting objects: 100% (33/33)[KWriting objects: 100% (33/33), 355.53 KiB | 3.86 MiB/s, done.
+Total 33 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), done.[K
+To https://github.com/sitisalwani/RFID_Poisson.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Dropbox/GitHub/Poisson_Distributionssy-macbook-pro:Poisson_Distribution sitisalwaniyaacob$ 

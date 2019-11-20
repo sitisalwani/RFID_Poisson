@@ -1,11 +1,43 @@
 ---
-title: "Generate RFID Data Using Poisson Distribution"
-author: "SSY"
+title: "TL;DR: Generating RFID Data Using Poisson Distribution in R"
+author: "Siti Salwani Yaacob"
 date: "11/19/2019"
 output: html_document
 ---
 
-In this section, we only focus on how to generate RFID data using Poisson distribution. The reason of why Poisson distribution is because it is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 100 RFID readings have been captured per second using one RFID reader. Can we generate a simulation of number of RFID readings for the next 10 seconds?  
+
+### What is RFID ? 
+Radio Frequency Identification (RFID), is a wireless communication technology that is used in a wide range of tracking and identification systems. RFID allows a sensor (RFID reader) to read, from a distance, and without line of sight, a unique product code (Electronic Product Code or *EPC*) associated with a tag. An RFID system consist of three components;
+
+- A RFID device (Tag or Transponder)
+- A tag reader (Interrogator) with an antenna and transceiver
+- A host system or connection to an application system
+
+**RFID Tag or Transponder.** RFID tags are made out of an intergrated circuit (called IC or microchip) attached to an antenna. A microchip stores a unique serial number and some additional information. When a RFID reader transmits an encoded radio signal to obtain data from a tag, the RFID tag receives the message and then responds with its identification and other information.
+
+**RFID Reader or Interrogator.** A single RFID reader is a network connected device (fixed or mobile) consisting of a small computer and a radio. The radio is connected to one or more antenna that sends power, data, and commands to the tags. Gateway RFID readers are one of the most common type of RFID readers. They consists of a RFID reader with multiple antennas that are placed so as to surround a pathway. As tagged items go through the gateway, the tags are read and reported to the server.
+
+**Application.** Application or enetrprise applications and database is the topmost layer of components in RFID architecture. In this layer, it actually interacts with user as it consists graphical user interface. The readings that have been filtered into required format are sent to this layer. This layer converts the data from middleware into meaningful information. It then delivers information to ther application system or database.
+
+### What you need to know about RFID data 
+A lot of retailers, logistics companies and manufactureres express concerns about RFID not being able to read every single tag, every single time. Manual counting, such as scanning a barcode, is never 100% accurate either, but is far accurate than barcode technology.
+
+A manufacturer would never try to read every bar code on pallet going through loading dock door, but insisting that RFID technology has to be used in this way is ignoring the possibilities of how RFID systems can be used to create more value. Manufacturer can collect the information needed to improve their operations by reading RFID tags on caes, handsfree, as those cases are being stacked onto the pallet.
+
+1. **Data Volume**. Tracing the movement of each individual object in a sensor infrastructure results in extremely large amounts of data. RFID readers can captured multiple of RFID tags at once, up to thousands of tags per second. An information management infrastructure that can manage this vast amount of data and can deal with the high update frequenct as well as with the query rate is needed.
+
+2. **Data Quality**. The data can be very noisy and redundant. As already mentioned, wireless communication may not always be realiable due to radio-frequenct collicions and signal interference, metal shielding, or other physical obstructions. According to [ref], most retailers will admit to having an inventory accuracy of around 60-70%. These technial issues lead to tags being missed (false-negative readings) or unexpected extra readings (false-positive readings). To eliminate these false readings, semantic post-processing, cleaning and filtering must be performed at the middleware layer.
+
+### Why Poisson distribution?
+Rationally, Poisson distribution is commonly used to model the number of expected events for a process given we know the average rate at which events occur during a given unit of time. For example, assume that there is 10 RFID tags with ocurrence of 7 readings for every RFID tag have been captured per minute using one RFID reader. Can we generate a simulation of number of RFID readings for the next 2 minutes?
+
+For example, the Poisson distribution is appropriate for modeling the number of RFID data, if they know the average of readings ocurrence during that time period.  
+
+- Although the average reading ocurrence is 7, they could theoretically get any number of readings during that time period.
+- The events are effectively independently since they is no reason to expect an RFID tag to affect the chances of another ocurrence readings captured.
+- The occurrence rate may be assumed to be constant.
+
+Of course, this situation isn’t an absolute perfect theoretical fit for the Poisson distribution. For instance, the RFID reader cannot process a trillion readings at one second. According to [ref], RFID readers can process multiple RFID tags at once, up to thousands of tags per second. Practically speaking, the situation is close enough that the Poisson distribution does a good job of modeling the situation’s behavior.  
 
 Based on the this explanation, we can describe this process as:
 
@@ -13,7 +45,6 @@ Based on the this explanation, we can describe this process as:
 -	A rate of occurrence – how often is an event expected to occur in that window
 -	The number of times an event occurs (the observation).  
 
-Theoretically, the Poisson distribution is the discrete probability distribution of the number of events occurring in a given time period, given the average number of times the event occurs over that time period [ ].  
 
 The Poisson distribution is applicable only when several conditions hold;
 
@@ -22,17 +53,11 @@ The Poisson distribution is applicable only when several conditions hold;
 - The rate of occurrence is constant; that is; the rate does not change based on time.
 - The probability of an event occurring is proportional to the length of the time period. For example, it should be twice as likely for an event to occur in a 2 hour time period than it is for an event to occur in 1-hour period.  
 
-For example, the Poisson distribution is appropriate for modeling the number of phone calls an office would receive during the noon hour, if they know that they average 4 calls per hour during that time period.  
 
-- Although the average is 4 calls, they could theoretically get any number of calls during that time period.
-- The events are effectively independently since they is no reason to expect a caller to affect the chances of another person calling.
-- The occurrence rate may be assumed to be constant.
-- It is reasonable to assume that (for example) the probability of getting a call in the first half hour is the same as the probability of getting a call in the final half hour.  
-
-Of course, this situation isn’t an absolute perfect theoretical fit for the Poisson distribution. For instance, the office certainly cannot receive a trillion calls during the time period, as there are less than a trillion people alive to be making phone calls. Practically speaking, the situation is close enough that the Poisson distribution does a good job of modeling the situation’s behavior.  
 
 ### RPois: Simulate random number from the Poisson distribution in R  
 
+Theoretically, the Poisson distribution is the discrete probability distribution of the number of events occurring in a given time period, given the average number of times the event occurs over that time period [ ].
 Using R programming, r’s rpois function generates values from the Poisson distribution and returns the results.  
 
 The function takes two arguments:
@@ -42,11 +67,11 @@ The function takes two arguments:
 
 The expected syntax is;
 
-> rpois(# observations, rate = rate)
+> rpois( observations, rate )
 
 or
 
-> rpois( n , lambda)
+> rpois( n , lambda )
 
 
 For example;
