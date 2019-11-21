@@ -1,0 +1,12 @@
+21 Nov 2019
+
+So I have varieties definition on data redundancy
+
+Definition 1 (Data Redundancy)
+Temporal redundancy occurs due to reading multiple times by a reader in a time window. We can consider the earliest arriving event in the window as a non-redundant event while the remaining events in the window are regarded as redundant events. The total number of readings in the similar time window can determine the observation probability, "p" of the tag in the identifying which reader the tag belongs to, in spatial redundancy. Readings on similar tagged objects in different time window are considered as new readings and are accumulated as a reading frequency.
+
+Definition 2 (Data Redundancy)
+As spatial redundancy occurs due to reading multiple times by multiple readers in a time window, we can consider the event with the higher observation probability as a non-redundant event. For instance, the event with the nearest detection distance form the detection centre will probably be read most, and the remaining events are regarded as redundant events.
+
+Definition 3 (Data Redundancy)
+According to Definition 2, if an object is read multiple times in the same window, where, the object is detected by a reader in two adjacent records; the later record is identified as temporal redundant data.
